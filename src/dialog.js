@@ -1,7 +1,7 @@
 import {Cards} from "./data.js"; 
 
 const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("header > button");
+const showButton = document.querySelector("header > div > button");
 const closeButton = document.querySelector("dialog button");
 const question = document.getElementById("question");
 const answer = document.getElementById("answer"); 

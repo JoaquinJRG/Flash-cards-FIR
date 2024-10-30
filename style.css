@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,8 +78,11 @@ dialog {
 }
 
 .card-text {
+  font-size: 30px;
   text-wrap: wrap;
   text-align: center;
+  inline-size: 600px;
+  overflow-wrap: break-word;
 }
 
 .card {
@@ -124,7 +127,10 @@ dialog {
   }
 }
 
-
+.center-div {
+  display: flex;
+  justify-content: center;
+}
 
 .button2 {
   padding: 10px;
@@ -137,10 +143,32 @@ dialog {
   
 }
 
+.button3 {
+  padding: 10px 30px;
+  border: transparent;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+  cursor: pointer;
+  transition: 0.3s;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  
+
+}
+
 @media screen and (max-width: 800px) {
   .card {
     width: 400px;
     height: 300px;
+  }
+
+  .card-text {
+    font-size: 25px;
+    inline-size: 350px;
   }
 }
 
@@ -148,6 +176,11 @@ dialog {
   .card {
     width: 350px;
     height: 300px;
+  }
+
+  .card-text {
+    font-size: 20px;
+    inline-size: 250px;
   }
 }
 
