@@ -1,0 +1,13 @@
+{
+  "name": "flash-cards",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    
+  },
+  "keywords": [],
+  "author": "Joaquín Rodríguez Guillén",
+  "license": "ISC",
+  "description": "A simple flashcard app."
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Cards FIR 😈</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./main.js" type="module"></script>
+</head>
+<body>
+  <dialog>
+    <button autofocus>
+      <img src="./resources/x.svg" alt="">
+    </button>
+    <form>
+      <input type="text" id="question" placeholder="Question">
+      <hr>
+      <input type="text" id="answer" placeholder="Answer">
+      <button class="button2">Create</button>
+    </form>
+  </dialog>
+  <main>
+    <header>
+      <h1 class="text-center">Flash Cards FIR 😈</h1>
+      <button class="button">Add Card</button>
+    </header>
+    <div class="card">
+      <h2 class="card-text" id="card-text"></h2>
+      <div class="setting">
+        <img src="./resources/trash.svg" alt="" id="delete">
+      </div>
+    </div>
+    <nav>
+      <img src="./resources/chevron-left.svg" alt="" class="button" id="left-btn">
+      <img src="./resources/refresh.svg" alt="" class="button" id="reverse-btn">
+      <img src="./resources/chevron-right.svg" alt="" class="button" id="right-btn">
+    </nav>
+    <p class="text-center">Card <span id="cards-data"></span></p>
+  </main>
+</body>
+</html>
