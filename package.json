@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Joaquín Rodríguez Guillén",
   "license": "ISC",
-  "description": "A simple flashcard app."
+  "description": "A simple flashcard app.",
+  "dependencies": {
+  }
 }

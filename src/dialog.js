@@ -16,14 +16,15 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
 
   if (question.value == "" || answer.value == "") {
     dialog.close(); 
     return; 
   }; 
 
-  Cards.store(question.value, answer.value); 
-  
+  const error = await Cards.store(question.value, answer.value); 
+  console.log(error); 
+
   dialog.close();
 }); 

@@ -1,52 +1,28 @@
+import { supa } from "./config.js";
+
 export class Cards {
-  
-  static data = []; 
 
-  static getAll() {
+  static async getAll() {
+    const data = await supa.from("Cards").select(); 
+    return data; 
 
-    if (localStorage.hasOwnProperty("cards")) {
-      this.data = JSON.parse(localStorage.getItem("cards")); 
-    } else {
-      localStorage.setItem("cards", JSON.stringify(this.data)); 
-    }
-
-    return this.data; 
   }
 
-  static store(question, answer) {
+  static async store(question, answer) {
+    const { error } = await supa
+      .from('Cards')
+      .insert({
+        question: question, 
+        answer: answer
+    }); 
 
-    const newCard = {
-      id: crypto.randomUUID(),
-      question: question, 
-      answer: answer
-    }; 
-
-    this.data.push(newCard); 
-    localStorage.setItem("cards", JSON.stringify(this.data)); 
-
-    return this.data; 
+    return error; 
   }
 
-  static delete(id) {
-    this.data = this.data.filter((card) => card.id !== id); 
-    localStorage.setItem("cards", JSON.stringify(this.data)); 
+  static async delete(id) {
+    const response = await supa.from("Cards").delete().eq("id", id); 
 
-    return this.data; 
-  }
-
-  static edit() {
-
+    return response; 
   }
 
 }
-
-/*
-
-[
-    {question: "Capital de Madagascar", answer: "Antananarivo"},
-    {question: "Capital de Francia", answer: "París"},
-    {question: "Capital de España", answer: "Madrid"},
-    {question: "Capital de Alemania", answer: "Berlin"},
-]
-
-*/
